@@ -13,7 +13,7 @@ end
 task :deploy => :build do
   Dir["_site/**/*"].each do |file|
     next if File.directory? file
-    upload(file, "peleteironet", file.gsub("_site/", ''))
+    upload(file, "peleteiro.net", file.gsub("_site/", ''))
   end
 end
 
