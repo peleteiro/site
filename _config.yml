@@ -1,0 +1,11 @@
+name: Jose Peleteiro
+url: http://www.peleteiro.net
+description: Personal space of Jose Peleteiro.
+markdown: redcarpet
+permalink: /blog/:title/
+
+timezone: America/Sao_Paulo
+
+port: 3000
+
+exclude: ["Gemfile", "Gemfile.lock", "Rakefile"]
