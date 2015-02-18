@@ -17,6 +17,10 @@ task :deploy => :build do
   end
 end
 
+task 'purge-cache' do
+  system "curl https://www.cloudflare.com/api_json.html -d 'a=fpurge_ts' -d 'tkn=#{ENV['CLOUDFLARE_TOKEN']}' -d 'email=#{ENV['CLOUDFLARE_EMAIL']}' -d 'z=peleteiro.net' -d 'v=1'"
+end
+
 def upload(from_file, bucket, to_file)
   s3 = AWS::S3.new(access_key_id: ENV['AWS_ACCESS_KEY_ID'], secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'])
   bucket = s3.buckets[bucket]
