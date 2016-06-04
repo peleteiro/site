@@ -13,35 +13,14 @@
     <link href="{{ site.url }}{{ page.url | remove: "index.html" }}" rel="canonical">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-    {% stylesheet application %}
+    {% stylesheet site %}
   </head>
 
   <body>
-    <header class="site-header" role="banner">
-      {% unless page.no_head %}
-        <div class="container">
-          <nav role="navigiation">
-            <ul class="site-nav">
-              <li><a href="/">About</a>
-              <li><a href="/blog/">Blog</a>
-            </ul>
-          </nav>
-        </div>
-      {% endunless %}
-    </header>
 
-    {% if page.hero %}
-      <div class="hero" style="background-image: url({{ page.hero }});"></div>
-    {% endif %}
-
-    <div class="site-content">
-      <div class="container">
-        {{ content }}
-      </div>
+    <div class="container">
+      {{ content }}
     </div>
-
-    <footer class="site-footer">
-    </footer>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

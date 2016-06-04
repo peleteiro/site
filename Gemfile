@@ -5,6 +5,11 @@ gem 'jekyll'
 gem 'jekyll-assets'
 gem 'sass'
 
+gem 'thin'
+gem 'guard'
+gem 'guard-jekyll-plus'
+gem 'guard-livereload'
+
 gem 'rake'
 gem 'ruby-progressbar'
 gem 'parallel'
