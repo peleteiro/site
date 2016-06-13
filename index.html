@@ -57,6 +57,14 @@ sitemap:
 
 <hr>
 
+<!-- <ul class="posts">
+  {% for presentation in site.presentations limit:5 %}
+    <li><a href="{{ presentation.url }}">{{ presentation.title }}</a><span class="presentations__date">{{ presentation.date | date_to_string }}</span></li>
+  {% endfor %}
+</ul>
+<hr>
+ -->
+
 <ul class="posts">
   {% for post in site.posts limit:5 %}
     <li><a href="{{ post.url }}">{{ post.title }}</a><span class="posts__date">{{ post.date | date_to_string }}</span></li>
