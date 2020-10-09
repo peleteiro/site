@@ -1,0 +1,102 @@
+import * as React from 'react'
+import {HomeLayout} from '../layouts'
+import {css} from '@emotion/core'
+
+import {dimensions, colors} from '../styles/variables'
+
+const root = css`
+  max-width: 300px;
+  justify-content: center;
+`
+
+const h1 = css`
+  font-size: ${dimensions.headingSizes.h3}rem;
+  font-weight: normal;
+  text-align: center;
+`
+
+const ul = css`
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  list-style-type: none;
+  margin: 30px 0;
+  padding: 0;
+  flex-direction: column;
+
+  a {
+    color: ${colors.black};
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    li {
+      display: block;
+      margin-right: 10px;
+    }
+  }
+`
+const VcardPage = () => (
+  <HomeLayout css={root}>
+    <h1 css={h1}>Jose Peleteiro</h1>
+    <ul css={ul}>
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=5521992446550&text=Olá,%20Peleteiro!">
+          <ul>
+            <li>
+              <svg width="48" height="48" viewBox="0 0 64 64">
+                <path d="M32 0C14.327 0 0 14.327 0 32c0 17.673 14.327 32 32 32s32-14.327 32-32C64 14.327 49.673 0 32 0z" fill="#444444" />
+                <path
+                  d="M30.488 31.657c-.96-.889-2.027-2.135-2.49-3.239-.071-.142-.213-.499 0-.783.426-.57.497-.605.96-1.138.321-.392.568-.747.463-1.067l-1.601-4.164c-.142-.284-.568-.321-1.067-.355-.426 0-.889 0-1.209.071-.712.25-2.169 2.171-2.348 3.559-.392 3.023 2.348 7.045 5.085 9.537 2.739 2.526 6.972 4.911 9.959 4.235 1.388-.321 3.165-1.922 3.307-2.668.071-.321.037-.781-.037-1.209-.034-.497-.142-.854-.428-.996l-3.626-1.674c-.321-.179-.641-.037-.96.357-.392.534-.57.747-1.031 1.317-.25.321-.426.534-.71.568-.321.071-.747-.108-.818-.108-1.138-.393-2.452-1.355-3.449-2.243zM18.539 44.432l2.064-5.231a15.033 15.033 0 01-3.662-9.858c0-8.326 6.757-15.052 15.08-15.052 8.321 0 15.044 6.727 15.044 15.052 0 8.328-6.722 15.087-15.044 15.087-3.344 0-6.402-1.067-8.891-2.918l-4.591 2.92zm-2.526-5.126l-2.845 11.388 10.172-4.626a18.76 18.76 0 008.678 2.135c10.385 0 18.814-8.433 18.814-18.859 0-10.389-8.429-18.822-18.814-18.822-10.421 0-18.85 8.433-18.85 18.822 0 3.664 1.067 7.081 2.845 9.962z"
+                  fill="#FFF"
+                />
+              </svg>
+            </li>
+            <li>Enviar WhatsApp</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#106;&#111;&#115;&#101;&#64;&#x70;&#101;&#x6c;&#101;&#x74;&#101;&#105;&#x72;&#111;&#x2e;&#110;&#x65;&#116;">
+          <ul>
+            <li>
+              <svg width="48" height="48" viewBox="0 0 32 32">
+                <path d="M16 0C7.163 0 0 7.163 0 16c0 8.836 7.163 16 16 16s16-7.164 16-16c0-8.837-7.163-16-16-16z" fill="#444444" />
+                <g fill="#FFF">
+                  <path d="M6.518 21.815l5.189-6.524-5.189-3.172zM19.5 15.746l-3.511 2.162-3.517-2.15L7.11 22.5h17.757z" />
+                  <path d="M15.988 16.864l9.494-5.847V9.5H6.518v1.576zM20.263 15.276l5.219 6.567v-9.781z" />
+                </g>
+              </svg>
+            </li>
+            <li>Enviar Email</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="https://peleteiro.net/vcard.vcf">
+          <ul>
+            <li>
+              <svg width="48" height="48" viewBox="0 0 32 32">
+                <path d="M16 .016c-8.837 0-16 7.163-16 16 0 8.836 7.163 16 16 16s16-7.164 16-16c0-8.837-7.163-16-16-16z" fill="#444444" />
+                <g fill="#FFF">
+                  <circle cx="10.324" cy="16.016" r="4.415" />
+                  <circle cx="21.676" cy="16.016" r="4.415" />
+                </g>
+              </svg>
+            </li>
+            <li>Adicionar aos Contatos</li>
+          </ul>
+        </a>
+      </li>
+    </ul>
+  </HomeLayout>
+)
+
+export default VcardPage

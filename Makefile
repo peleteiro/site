@@ -1,14 +1,19 @@
-.DEFAULT_GOAL = build
-.PHONY: build
+.DEFAULT_GOAL = dev
+.PHONY: *
+SHELL := '/bin/bash'
 
 clean:
-	rm -rf _site
-
-build: clean
-	bundle exec jekyll build --config=_config.yml,_config_prod.yml
-
-deploy:
-	aws s3 sync _site/ s3://peleteiro.net/ --acl public-read
+	@rm -rf .cache public ./yarn-error.log
+	@find . -name .DS_Store | xargs rm -f
 
 dev:
-	bundle exec guard
+	@./node_modules/.bin/gatsby develop
+
+generate:
+	@./node_modules/.bin/graphql-codegen --config graphql-codegen.yml
+
+build:
+	@NODE_ENV=production ./node_modules/.bin/gatsby build
+
+deploy: build
+	@./node_modules/.bin/s3p sync -y
