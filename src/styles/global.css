@@ -3,8 +3,21 @@
 
 @theme {
   --font-sans:
-    'Open Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
+    'Open Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --animate-blink: blink 1.2s ease-in-out infinite;
+
+  @keyframes blink {
+    0%,
+    40%,
+    100% {
+      opacity: 1;
+    }
+    60%,
+    80% {
+      opacity: 0;
+    }
+  }
 }
 
 /* Ensure a tags behave exactly like they did */

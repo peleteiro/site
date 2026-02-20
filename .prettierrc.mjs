@@ -9,7 +9,7 @@ export default {
       },
     },
   ],
-  printWidth: 120,
+  printWidth: 140,
   tabWidth: 2,
   useTabs: false,
   semi: false,
