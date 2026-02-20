@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#MISE description="Atualiza ferramentas do mise"
+
+set -euo pipefail
+
+mise self-update -y
+mise upgrade -y

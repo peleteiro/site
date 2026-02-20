@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Análise estática (oxlint --fix)"
+
+set -euo pipefail
+
+mise run lint:static:ts

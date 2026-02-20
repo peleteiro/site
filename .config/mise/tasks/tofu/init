@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Inicializa o OpenTofu"
+
+set -euo pipefail
+
+echo "==> Inicializando OpenTofu..."
+cd tofu
+tofu init
+cd -
+
+echo "✓ Inicialização do OpenTofu completa!"

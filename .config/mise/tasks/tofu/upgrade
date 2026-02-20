@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Atualiza providers do OpenTofu"
+
+set -euo pipefail
+
+echo "==> Atualizando OpenTofu..."
+cd tofu
+tofu init --upgrade
+cd -
+
+echo "✓ Atualização do OpenTofu completa!"

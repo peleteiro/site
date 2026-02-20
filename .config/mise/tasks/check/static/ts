@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Análise estática TypeScript/JS (oxlint)"
+
+set -euo pipefail
+
+pnpm oxlint --deny-warnings --ignore-pattern "**/*.md"

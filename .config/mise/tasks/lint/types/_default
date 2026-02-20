@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Verifica tipos (astro check)"
+
+set -euo pipefail
+
+mise run lint:types:astro

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#MISE description="Atualiza dependências JavaScript"
+
+set -euo pipefail
+
+pnpm dlx npm-check-updates@latest --upgrade
+pnpm dedupe
+pnpm install

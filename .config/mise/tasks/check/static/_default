@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Análise estática (oxlint)"
+
+set -euo pipefail
+
+mise run check:static:ts

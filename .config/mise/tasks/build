@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Build static site"
+
+set -euo pipefail
+
+pnpm astro build

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Formata código (prettier)"
+
+set -euo pipefail
+
+mise run lint:format:ts

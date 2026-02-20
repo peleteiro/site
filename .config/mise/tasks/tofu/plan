@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Planeja mudanças na infraestrutura"
+
+set -euo pipefail
+
+echo "==> Executando tofu plan..."
+cd tofu
+tofu plan
+cd -
+
+echo "✓ Plan completo!"

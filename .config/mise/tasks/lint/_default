@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#MISE description="Executa lint completo com fix (format + static + types)"
+
+set -euo pipefail
+
+echo "🔧 Executando lint completo..."
+
+pnpm astro sync
+
+mise run lint:format
+mise run lint:static
+mise run lint:types
+
+echo "✅ Lint completo!"

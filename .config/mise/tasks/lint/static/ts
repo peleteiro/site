@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Análise estática TypeScript (oxlint --fix)"
+
+set -euo pipefail
+
+pnpm oxlint --fix .

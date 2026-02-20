@@ -1,0 +1,19 @@
+pre-commit:
+  parallel: false
+  commands:
+    format:
+      glob: '*.{js,ts,cjs,mjs,jsx,tsx,json,jsonc,astro,css}'
+      run: mise exec -- pnpm prettier --write {staged_files} && git add {staged_files}
+      fail_text: 'Prettier formatting failed'
+    lint:
+      glob: '*.{js,ts,cjs,mjs,jsx,tsx}'
+      run: mise exec -- pnpm oxlint --deny-warnings --fix {staged_files} && git add {staged_files}
+      fail_text: 'oxlint found errors'
+    astro-sync:
+      glob: '*.{astro,ts,tsx}'
+      run: mise exec -- pnpm astro sync
+      fail_text: 'Astro sync failed'
+    astro-check:
+      glob: '*.astro'
+      run: mise exec -- pnpm astro check --minimum-severity warning
+      fail_text: 'Astro check found errors'

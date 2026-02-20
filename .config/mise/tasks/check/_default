@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#MISE description="Executa verificação completa sem fix (CI)"
+
+set -euo pipefail
+
+echo "🔍 Executando verificação completa (CI)..."
+
+mise run check:format
+mise run check:static
+mise run check:types
+
+echo "✅ Verificação completa!"

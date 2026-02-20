@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Aplica mudanças na infraestrutura"
+
+set -euo pipefail
+
+echo "==> Executando tofu apply..."
+cd tofu
+tofu apply
+cd -
+
+echo "✓ Apply completo!"

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Verifica formatação TypeScript/JS (prettier --check)"
+
+set -euo pipefail
+
+pnpm prettier --check .

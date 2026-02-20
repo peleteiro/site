@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Verifica formatação (prettier --check)"
+
+set -euo pipefail
+
+mise run check:format:ts

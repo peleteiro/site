@@ -1,0 +1,48 @@
+---
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {title = 'Jose Peleteiro', description = 'Personal space of Jose Peleteiro.'} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="jose, peleteiro, vcard, contatos, contacts, email, whatsapp" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <div class="center">
+        <slot />
+      </div>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: rgb(51, 51, 51);
+  }
+
+  .center {
+    width: auto;
+    max-width: 800px;
+  }
+</style>

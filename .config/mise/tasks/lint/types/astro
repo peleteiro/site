@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Verifica tipos Astro (astro check)"
+
+set -euo pipefail
+
+pnpm astro check --minimum-severity warning
