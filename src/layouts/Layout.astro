@@ -8,7 +8,7 @@ const {title = 'Jose Peleteiro', description = 'Personal space of Jose Peleteiro
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="text-[18px] leading-[1.45]">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,9 +17,9 @@ const {title = 'Jose Peleteiro', description = 'Personal space of Jose Peleteiro
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
     <title>{title}</title>
   </head>
-  <body>
-    <main>
-      <div class="center">
+  <body class="w-full m-0 overflow-x-hidden overflow-y-scroll font-sans text-[rgb(51,51,51)] bg-white antialiased">
+    <main class="flex flex-col min-h-screen items-center justify-center bg-white text-[rgb(51,51,51)]">
+      <div class="w-auto max-w-200">
         <slot />
       </div>
     </main>
@@ -28,21 +28,4 @@ const {title = 'Jose Peleteiro', description = 'Personal space of Jose Peleteiro
 
 <style is:global>
   @import '../styles/global.css';
-</style>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    color: rgb(51, 51, 51);
-  }
-
-  .center {
-    width: auto;
-    max-width: 800px;
-  }
 </style>

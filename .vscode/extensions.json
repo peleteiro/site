@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions",
+    "opentofu.vscode-opentofu",
+    "oxc.oxc-vscode",
+    "tombi-toml.tombi",
+    "bierner.markdown-mermaid",
+    "shd101wyy.markdown-preview-enhanced",
+    "ms-python.python",
+    "tilt-dev.tilt"
+  ],
+  "unwantedRecommendations": ["biomejs.biome"]
+}

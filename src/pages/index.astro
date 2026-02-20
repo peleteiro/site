@@ -3,12 +3,15 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
-  <h1>Hello. I'm Jose Peleteiro</h1>
-  <div class="intro">
-    <p>I love to create products and build stuff.</p>
+  <h1
+    class="font-sans mt-0 mb-2 text-[rgb(51,51,51)] font-semibold leading-[1.27] [text-rendering:optimizeLegibility] text-[2.441rem]">
+    Hello. I'm Jose Peleteiro
+  </h1>
+  <div class="text-center">
+    <p class="font-sans text-[22px] m-0">I love to create products and build stuff.</p>
   </div>
-  <ul class="social">
-    <li>
+  <ul class="flex items-center justify-center list-none my-2.5 mx-0 p-0">
+    <li class="inline-block m-1.25">
       <a href="https://github.com/peleteiro/">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
           <path
@@ -17,7 +20,7 @@ import Layout from '../layouts/Layout.astro'
         </svg>
       </a>
     </li>
-    <li>
+    <li class="inline-block m-1.25">
       <a href="https://twitter.com/peleteiro/">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
           <path
@@ -26,7 +29,7 @@ import Layout from '../layouts/Layout.astro'
         </svg>
       </a>
     </li>
-    <li>
+    <li class="inline-block m-1.25">
       <a href="https://www.linkedin.com/in/peleteiro">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 20 20">
           <path
@@ -35,7 +38,7 @@ import Layout from '../layouts/Layout.astro'
         </svg>
       </a>
     </li>
-    <li>
+    <li class="inline-block m-1.25">
       <a href="mailto:jose@peleteiro.net">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
           <path
@@ -45,25 +48,5 @@ import Layout from '../layouts/Layout.astro'
       </a>
     </li>
   </ul>
-  <hr />
+  <hr class="relative my-6 mx-0 border-0 border-t border-solid border-[#f5f3f7]" />
 </Layout>
-
-<style>
-  .intro {
-    text-align: center;
-  }
-
-  .social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    margin: 10px 0;
-    padding: 0;
-  }
-
-  .social li {
-    display: inline-block;
-    margin: 5px;
-  }
-</style>

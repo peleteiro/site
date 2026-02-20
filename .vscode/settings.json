@@ -1,0 +1,65 @@
+{
+  "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "oxc.enable": true,
+  "search.exclude": {
+    "**/engine/data": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss",
+    "Tiltfile": "python",
+    "Tiltfile.*": "python"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSaveMode": "file",
+  "emmet.showExpandedAbbreviation": "never",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[Tiltfile]": {
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": null,
+    "python.linting.enabled": false,
+    "python.analysis.disabled": ["all"]
+  },
+  "markdown-preview-enhanced.theme": "github-dark.css",
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+  "markdown-preview-enhanced.mermaidTheme": "dark",
+  "chat.agent.maxRequests": 150
+}
