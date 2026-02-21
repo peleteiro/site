@@ -22,6 +22,15 @@ const {title = 'Jose Peleteiro', description = 'Personal space of Jose Peleteiro
     <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
     <title>{title}</title>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ6E4C8Y52"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-ZZ6E4C8Y52')
+    </script>
   </head>
   <body class="w-full m-0 overflow-x-hidden overflow-y-scroll font-sans text-[rgb(51,51,51)] bg-white antialiased">
     <main class="flex flex-col min-h-dvh items-center justify-center bg-white text-[rgb(51,51,51)] px-6">
