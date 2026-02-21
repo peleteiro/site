@@ -19,13 +19,8 @@
   }
 }
 
-/* Ensure a tags behave exactly like they did */
 @layer base {
   a {
-    @apply text-[#663399] no-underline;
-  }
-  a:hover,
-  a:focus {
-    @apply underline;
+    @apply no-underline;
   }
 }
