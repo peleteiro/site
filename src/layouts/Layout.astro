@@ -4,23 +4,64 @@ interface Props {
   description?: string
 }
 
-const {title = 'Jose Peleteiro', description = 'Personal space of Jose Peleteiro.'} = Astro.props
+const {title = 'Jose Peleteiro', description = 'Site pessoal de Jose Peleteiro.'} = Astro.props
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href
+const ogImageUrl = new URL('/assets/avatar.jpg', Astro.site).href
 ---
 
 <!doctype html>
-<html lang="en" class="text-[18px] leading-[1.45]">
+<html lang="pt-BR" class="text-[18px] leading-[1.45]">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="jose peleteiro, peleteiro, vcard, contatos, contacts, email, whatsapp" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <meta name="keywords" content="jose peleteiro, peleteiro, vcard, contato, email, whatsapp" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- JSON-LD Structured Data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Jose Peleteiro',
+        url: 'https://peleteiro.net',
+        email: 'jose@peleteiro.net',
+        telephone: '+55 21 99244-6550',
+        image: ogImageUrl,
+        sameAs: [
+          'https://github.com/peleteiro/',
+          'https://x.com/peleteiro/',
+          'https://www.linkedin.com/in/peleteiro',
+          'https://instagram.com/peleteiro',
+        ],
+      })}
+    />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ6E4C8Y52"></script>
     <script is:inline>
