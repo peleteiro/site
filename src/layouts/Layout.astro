@@ -17,6 +17,8 @@ const ogImageUrl = new URL('/assets/avatar.jpg', Astro.site).href
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="keywords" content="jose peleteiro, peleteiro, vcard, contato, email, whatsapp" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
@@ -26,6 +28,7 @@ const ogImageUrl = new URL('/assets/avatar.jpg', Astro.site).href
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Jose Peleteiro" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peleteiro.net/sitemap-index.xml
