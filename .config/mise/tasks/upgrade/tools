@@ -3,5 +3,5 @@
 
 set -euo pipefail
 
-mise self-update -y
+mise self-update -y 2>/dev/null || true
 mise upgrade -y
