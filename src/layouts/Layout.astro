@@ -64,8 +64,18 @@ const ogImageUrl = new URL('/assets/avatar.jpg', Astro.site).href
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-email]').forEach(function (el) {
+          var u = 'jose',
+            d = 'peleteiro.net'
+          el.href = 'mailto:' + u + '@' + d
+        })
+      })
+    </script>
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ6E4C8Y52"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || []
