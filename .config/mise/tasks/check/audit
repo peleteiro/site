@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Verifica vulnerabilidades nas dependências"
+
+set -euo pipefail
+
+pnpm audit --audit-level=critical
