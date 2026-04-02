@@ -22,3 +22,28 @@ resource "cloudflare_ruleset" "redirect_www" {
     },
   ]
 }
+
+# Redirect peleteiro.dev → peleteiro.net (301)
+
+resource "cloudflare_ruleset" "redirect_dev" {
+  zone_id = local.zone_id_dev
+  name    = "Redirect peleteiro.dev to peleteiro.net"
+  kind    = "zone"
+  phase   = "http_request_dynamic_redirect"
+
+  rules = [
+    {
+      action = "redirect"
+      action_parameters = {
+        from_value = {
+          status_code           = 301
+          target_url            = { expression = "concat(\"https://peleteiro.net\", http.request.uri.path)" }
+          preserve_query_string = true
+        }
+      }
+      expression  = "(http.host eq \"peleteiro.dev\" or ends_with(http.host, \".peleteiro.dev\"))"
+      description = "Redirect *.peleteiro.dev → peleteiro.net"
+      enabled     = true
+    },
+  ]
+}
