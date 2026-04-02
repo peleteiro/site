@@ -6,7 +6,6 @@
     "allow": ["Bash(*)", "Edit(*)", "EditFiles(*)", "Read(*)", "ReadFiles(*)", "WebFetch(*)", "WebSearch(*)", "Skill(*)"],
     "deny": ["Bash(rm -rf /)", "Bash(rm -rf .git)", "Bash(git push*)", "Bash(docker system prune)"]
   },
-  "preferredShell": "zsh",
   "ignorePatterns": [
     "**/node_modules/**",
     "**/.pnpm-store/**",

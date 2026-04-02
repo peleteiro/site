@@ -12,10 +12,11 @@ Execute o lint com auto-fix:
 mise run lint
 ```
 
-Este comando corrige automaticamente:
+Este comando executa `astro sync` e depois corrige automaticamente:
 
 - Formatação (Prettier)
-- Problemas de lint (oxlint)
+- Problemas de lint (oxlint --fix)
+- Verificação de tipos (astro check)
 
 Após executar:
 

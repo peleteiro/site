@@ -12,11 +12,11 @@ Execute a verificação completa sem fazer alterações:
 mise run check
 ```
 
-Este comando executa:
+Este comando verifica:
 
-- Prettier (formatação)
-- oxlint (análise estática)
-- Astro check (tipos)
+- Formatação (Prettier --check)
+- Análise estática (oxlint --deny-warnings)
+- Tipos (astro check)
 
 Após executar:
 
