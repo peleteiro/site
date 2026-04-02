@@ -18,7 +18,7 @@ tilt up
 
 - [Astro](https://astro.build/) (static output)
 - [Tailwind CSS](https://tailwindcss.com/) 4 (via `@tailwindcss/vite`)
-- [Cloudflare Workers](https://workers.cloudflare.com/) (deploy via Wrangler)
+- [Cloudflare Pages](https://pages.cloudflare.com/) (deploy via Wrangler)
 - [Tilt](https://tilt.dev/) (ambiente de desenvolvimento local)
 - [mise](https://mise.jdx.dev/) (tasks) + [pnpm](https://pnpm.io/) (packages) + [lefthook](https://github.com/evilmartians/lefthook) (git
   hooks)
@@ -54,7 +54,7 @@ public/
 | ------------------ | ------------------------------------------- |
 | `tilt up`          | Ambiente de desenvolvimento                 |
 | `mise run build`   | Build estático                              |
-| `mise run deploy`  | Build + deploy Cloudflare Workers             |
+| `mise run deploy`  | Build + deploy Cloudflare Pages             |
 | `mise run lint`    | Corrige problemas (format + static + types) |
 | `mise run check`   | Verifica qualidade sem alterar (CI)         |
 | `mise run upgrade` | Atualiza ferramentas e dependências         |
