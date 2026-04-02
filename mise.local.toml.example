@@ -1,4 +1,4 @@
-# Configurações locais (sobrescrevem .mise.toml)
+# Configurações locais (sobrescrevem mise.toml)
 # Copie para mise.local.toml e preencha suas credenciais
 # Este arquivo NÃO é commitado (.gitignore)
 
