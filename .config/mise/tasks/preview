@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-#MISE description="Preview built site"
-
-set -euo pipefail
-
-pnpm astro preview

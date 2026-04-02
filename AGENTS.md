@@ -17,6 +17,7 @@ Site pessoal de Jose Peleteiro. Hospedado em **peleteiro.net** (www redireciona 
 - **Framework**: Astro (static output)
 - **Estilo**: Tailwind CSS 4 (via `@tailwindcss/vite`)
 - **Deploy**: Cloudflare Pages (Workers via Wrangler)
+- **Dev**: Tilt (ambiente de desenvolvimento local)
 - **Ferramentas**: mise (tasks), pnpm (packages), lefthook (git hooks)
 - **Lint**: Prettier + prettier-plugin-astro (formatação), oxlint (análise estática), astro check (tipos)
 - **Fonte**: Open Sans (via `@fontsource/open-sans`)
@@ -47,9 +48,8 @@ public/
 
 | Comando            | Descrição                                   |
 | ------------------ | ------------------------------------------- |
-| `mise run dev`     | Servidor de desenvolvimento                 |
+| `tilt up`          | Ambiente de desenvolvimento                 |
 | `mise run build`   | Build estático                              |
-| `mise run preview` | Preview do build                            |
 | `mise run deploy`  | Build + deploy Cloudflare Pages             |
 | `mise run lint`    | Corrige problemas (format + static + types) |
 | `mise run check`   | Verifica qualidade sem alterar (CI)         |

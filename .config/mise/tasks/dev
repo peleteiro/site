@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-#MISE description="Start development server"
-
-set -euo pipefail
-
-pnpm astro dev
