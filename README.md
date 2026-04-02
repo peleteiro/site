@@ -1,6 +1,6 @@
 # peleteiro.net
 
-Site pessoal de Jose Peleteiro.
+Site pessoal de Jose Peleteiro. Hospedado em **peleteiro.net** (www redireciona para peleteiro.net).
 
 ## Requisitos
 
@@ -14,6 +14,39 @@ pnpm install
 mise run dev
 ```
 
+## Tech Stack
+
+- [Astro](https://astro.build/) (static output)
+- [Tailwind CSS](https://tailwindcss.com/) 4 (via `@tailwindcss/vite`)
+- [Cloudflare Pages](https://pages.cloudflare.com/) (deploy via Wrangler)
+- [mise](https://mise.jdx.dev/) (tasks) + [pnpm](https://pnpm.io/) (packages) + [lefthook](https://github.com/evilmartians/lefthook) (git
+  hooks)
+- [Prettier](https://prettier.io/) + [oxlint](https://oxc.rs/) +
+  [astro check](https://docs.astro.build/en/reference/cli-reference/#astro-check) (lint)
+- [Open Sans](https://fontsource.org/fonts/open-sans) (via `@fontsource/open-sans`)
+
+## Estrutura
+
+```
+src/
+├── layouts/       # Layout base (Layout.astro)
+├── pages/         # Páginas (.astro): index, vcard, 404
+└── styles/        # CSS global (Tailwind + animações)
+public/
+├── assets/        # Avatar (jpg, webp, png), vcard.vcf
+├── *.png, *.ico   # Favicons e ícones
+└── _headers       # Headers HTTP do Cloudflare
+.config/mise/tasks # Tasks do mise (file-based)
+```
+
+## Páginas
+
+| Página  | Descrição                                         |
+| ------- | ------------------------------------------------- |
+| `index` | Landing page com bio e links sociais              |
+| `vcard` | Página de contato (WhatsApp, email, salvar vCard) |
+| `404`   | Página de erro personalizada                      |
+
 ## Comandos
 
 | Comando            | Descrição                                   |
@@ -25,9 +58,4 @@ mise run dev
 | `mise run lint`    | Corrige problemas (format + static + types) |
 | `mise run check`   | Verifica qualidade sem alterar (CI)         |
 | `mise run upgrade` | Atualiza ferramentas e dependências         |
-
-## Tech Stack
-
-- [Astro](https://astro.build/) (static output)
-- [Tailwind CSS](https://tailwindcss.com/) 4
-- [Cloudflare Pages](https://pages.cloudflare.com/) (deploy)
+| `mise run clean`   | Limpa artefatos de build                    |
