@@ -1,0 +1,21 @@
+---
+// Link de contato da página vcard. O SVG do ícone e o texto vão no slot.
+interface Props {
+  href?: string
+  external?: boolean
+  email?: boolean
+}
+
+const {href = '#', external = false, email = false} = Astro.props
+const attrs = {
+  ...(external && {target: '_blank', rel: 'noopener noreferrer'}),
+  ...(email && {'data-email': true}),
+}
+---
+
+<a
+  href={href}
+  class="flex flex-row items-center justify-start gap-4 w-full p-2 text-slate-900 hover:text-slate-500 hover:no-underline focus:no-underline transition-colors duration-200 font-medium text-[20px]"
+  {...attrs}>
+  <slot />
+</a>

@@ -1,0 +1,17 @@
+---
+// Link de ícone social da página inicial. O SVG do ícone vai no slot.
+interface Props {
+  label: string
+  href?: string
+  email?: boolean
+}
+
+const {label, href = '#', email = false} = Astro.props
+const attrs = email ? {'data-email': true} : {target: '_blank', rel: 'noopener noreferrer'}
+---
+
+<li class="inline-block m-1.25">
+  <a href={href} aria-label={label} {...attrs}>
+    <slot />
+  </a>
+</li>
