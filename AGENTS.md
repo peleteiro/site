@@ -16,7 +16,7 @@ Site pessoal de Jose Peleteiro. Hospedado em **peleteiro.net** (www redireciona 
 
 - **Framework**: Astro (static output)
 - **Estilo**: Tailwind CSS 4 (via `@tailwindcss/vite`)
-- **Deploy**: Cloudflare Pages (via Wrangler)
+- **Deploy**: Cloudflare Workers static assets (via Wrangler)
 - **Dev**: Tilt (ambiente de desenvolvimento local)
 - **Ferramentas**: mise (tasks), pnpm (packages), lefthook (git hooks)
 - **Lint**: Prettier + prettier-plugin-astro (formatação), oxlint (análise estática), astro check (tipos)
@@ -26,11 +26,12 @@ Site pessoal de Jose Peleteiro. Hospedado em **peleteiro.net** (www redireciona 
 
 ```
 src/
+├── components/    # Componentes (SocialLink, ContactLink)
 ├── layouts/       # Layout base (Layout.astro)
 ├── pages/         # Páginas (.astro): index, vcard, 404
 └── styles/        # CSS global (Tailwind + animações)
 public/
-├── assets/        # Avatar (jpg, webp, png), vcard.vcf
+├── assets/        # Avatar (jpg), vcard.vcf
 ├── *.png, *.ico   # Favicons e ícones
 └── _headers       # Headers HTTP do Cloudflare
 .config/mise/tasks # Tasks do mise (file-based)
